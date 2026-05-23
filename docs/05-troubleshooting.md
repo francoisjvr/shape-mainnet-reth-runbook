@@ -56,6 +56,21 @@ docker logs -f --tail 100 shape-mainnet-op-reth
 docker logs -f --tail 100 shape-mainnet-op-node-reth
 ```
 
+Note:
+- `-f` means **follow**
+- if a container is quiet, the command can appear to "hang" while it waits for new log lines
+- if you want a one-shot snapshot instead, drop `-f`
+
+One-shot snapshot examples:
+
+```bash
+docker logs --tail 100 shape-mainnet-op-reth
+```
+
+```bash
+docker logs --tail 100 shape-mainnet-op-node-reth
+```
+
 Both at once:
 
 ```bash
