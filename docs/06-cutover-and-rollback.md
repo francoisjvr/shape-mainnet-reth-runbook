@@ -4,7 +4,7 @@ This repo is Reth-first, but cutover still needs discipline.
 
 ## Before cutover
 
-Do not retire a legacy geth lane until all of these are true:
+Do not change the serving path or declare the node production-ready until all of these are true:
 - local Shape head matches public Shape head
 - latest local block hash matches public latest block hash
 - `eth_chainId` is `360`

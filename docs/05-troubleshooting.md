@@ -29,14 +29,14 @@ On current Shape mainnet this is not automatically a failure.
 
 Do not waste time treating EL peer hunting as the first debugging step unless Shape changes the network model.
 
-## Symptom: startup fails after moving from geth
+## Symptom: startup fails after a layout or runtime change
 
 Check for:
 - port collisions
 - wrong datadir path
 - wrong JWT path
 - wrong rollup or genesis file path
-- accidentally pointing at the old geth runtime
+- accidentally pointing at the wrong runtime path
 
 ## Symptom: imported snapshot behaves strangely
 

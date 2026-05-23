@@ -45,15 +45,16 @@ Recommended baseline:
 
 ## Minimum safe mindset
 
-Treat the machine as having separate lanes:
-- **Reth lane**: the new canonical stack
-- **legacy geth lane**: rollback only, if it still exists
+Treat this as a clean Reth-only operator stack:
+- one canonical datadir
+- one canonical config dir
+- one canonical `op-node` runtime dir
 
-Do not blur them.
+Do not blur runtime, staging, and config roles.
 
 ## Do not do these things
 
-- do not point `op-reth` at a geth datadir
+- do not point `op-reth` at the wrong datadir
 - do not reuse default ports if another stack exists on the host
 - do not call the node healthy just because containers started
 - do not use `net_peerCount` as the main success metric on current Shape mainnet

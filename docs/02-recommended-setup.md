@@ -44,7 +44,7 @@ This repo uses non-default ports on purpose:
 - `17300` — `op-node` metrics
 - `19222` — `op-node` P2P TCP/UDP
 
-These avoid collisions with an older geth lane during migration.
+These avoid collisions with default ports and keep the runtime layout explicit.
 
 ## Service model
 
@@ -77,6 +77,5 @@ If versions change:
 
 ## Safety posture
 
-- preserve any existing geth lane until Reth is proven
 - if disk is tight, prefer moving a validated datadir into the runtime path over making a second full copy
 - use `/root/Upload` only as support storage, not as the default live runtime mount

@@ -1,6 +1,6 @@
 ---
 name: shape-network-mainnet-reth-setup
-description: Use when setting up, operating, or troubleshooting the canonical Shape mainnet op-reth plus op-node stack from this repo. Treat op-geth as legacy rollback or archival context only.
+description: Use when setting up, operating, or troubleshooting the canonical Shape mainnet op-reth plus op-node stack from this repo.
 version: 1.0.0
 author: Hermes Agent
 license: MIT
@@ -30,11 +30,10 @@ Use it when:
 - converting notes into a reusable Reth-first operator workflow
 - validating a transferred or downloaded Reth datadir
 - checking whether a live Shape Reth stack is healthy
-- documenting cutover or rollback rules around a legacy geth lane
+- documenting cutover or production-readiness rules for the Reth stack
 
 Do not use it when:
-- the real task is generic Ethereum/geth recovery
-- the job is primarily about reviving a sunset geth stack
+- the real task is generic Ethereum execution-client recovery unrelated to Shape mainnet Reth
 
 ## Core rules
 
@@ -43,8 +42,7 @@ Do not use it when:
 3. Report Shape block heights in decimal.
 4. Judge health by execution progress, not peer count.
 5. Use explicit runtime files instead of over-trusting built-in defaults.
-6. Keep any remaining geth lane as rollback or archival context only.
-7. Preserve expensive-to-replace uploaded data until the runtime lane is proven.
+6. Preserve expensive-to-replace uploaded data until the runtime lane is proven.
 
 ## Canonical paths
 

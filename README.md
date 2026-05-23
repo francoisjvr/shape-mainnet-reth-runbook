@@ -4,8 +4,6 @@ Canonical setup and operator runbook for a self-hosted **Shape mainnet `op-reth`
 
 This repo is the clean replacement for the older migration/journey notes. It pulls the best practical material forward, strips out the clutter, and centers the **golden Reth path**.
 
-`op-geth` is **sunset**. It only appears here as rollback or archival context.
-
 ## What this repo is for
 
 - first-time Shape mainnet Reth bring-up
@@ -13,7 +11,7 @@ This repo is the clean replacement for the older migration/journey notes. It pul
 - clean runtime directory layout
 - health checks based on real chain movement
 - troubleshooting a live `op-reth` + `op-node` stack
-- safe cutover from any remaining legacy geth lane
+- safe cutover to a clean Reth-only serving path
 
 ## What “healthy” means
 
@@ -74,7 +72,6 @@ Do **not** make `/root/Upload` the default live mount for a fresh clean install.
 - `docs/05-troubleshooting.md` — likely failure modes and what to check first
 - `docs/06-cutover-and-rollback.md` — migration discipline and rollback rules
 - `docs/07-shape-specific-notes.md` — Shape realities that change operator behavior
-- `docs/archive/legacy-geth-context.md` — legacy context only
 - `examples/` — `.env` and Docker Compose templates
 - `scripts/` — bootstrap and health-check helpers
 - `skills/shape-network-mainnet-reth-setup/SKILL.md` — Hermes skill for this repo’s workflow
@@ -86,11 +83,11 @@ Do **not** make `/root/Upload` the default live mount for a fresh clean install.
 3. Use explicit config artifacts.
 4. Report Shape block heights in decimal.
 5. Judge success by execution progress, not peer count.
-6. Keep any remaining geth lane untouched until Reth proves itself.
+6. Keep the runtime clean, isolated, and explicitly Reth-only.
 7. Prefer a snapshot-first bootstrap.
 8. Do not casually swap versions without recording why.
 
-## Related older repos
+## Source material
 
 This repo was distilled from:
 - `shape-mainnet-node-runbook`
