@@ -5,8 +5,8 @@ This is the least confusing safe path for a fresh Shape mainnet Reth bring-up.
 ## Prerequisites
 
 You need:
-- a Linux host with fast SSD storage
-- comfortable free disk headroom
+- a Linux host with SSD storage
+- enough free disk for the current Reth snapshot plus runtime growth
 - Docker and Docker Compose
 - an Ethereum mainnet RPC URL
 - an Ethereum mainnet beacon RPC URL
@@ -19,12 +19,22 @@ You need:
 Recommended baseline:
 - 8 vCPU or better
 - 16 GB RAM minimum
-- roughly 1 TB SSD/NVMe with headroom
+- SSD storage; NVMe is nice but not required
 
 Validated reference environment:
 - provider: **Contabo**
+- package class: **Cloud VPS**
 - OS: **Ubuntu 24.04 LTS**
 - virtualization: **KVM**
+
+Useful reference links:
+- Contabo pricing: <https://contabo.com/en/pricing/>
+- Contabo Cloud VPS page: <https://contabo.com/en/vps-server/>
+
+Practical note:
+- you do not need a huge disk just because this is Reth
+- the exact snapshot size changes over time
+- what matters is enough SSD space for the current snapshot, the live datadir, and some growth headroom
 
 That is a known-good baseline, not a strict provider requirement.
 

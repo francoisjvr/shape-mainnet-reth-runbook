@@ -26,20 +26,42 @@ A healthy node shows:
 
 ## Validated baseline
 
-This runbook is provider-neutral, but the practical baseline behind it was validated on a **Contabo VPS**.
+This runbook is provider-neutral, but the practical baseline behind it was validated on a **Contabo Cloud VPS**.
 
 Known-good reference shape:
 - provider: **Contabo**
+- package class: **Cloud VPS**
 - OS: **Ubuntu 24.04 LTS**
 - virtualization: **KVM**
 - CPU: **8 vCPU or better preferred**
 - RAM: **16 GB minimum**
-- disk: **roughly 1 TB SSD/NVMe with headroom**
+- disk: **SSD storage is enough; NVMe is optional**
+
+Useful reference links:
+- Contabo pricing: <https://contabo.com/en/pricing/>
+- Contabo Cloud VPS packages: <https://contabo.com/en/vps-server/>
 
 Important note:
 - Contabo is a known-working reference environment for this runbook
 - it is **not** a hard requirement
-- what matters is stable CPU, RAM, SSD performance, and enough free disk for snapshot staging plus runtime growth
+- you do not need a huge drive just because this is Reth
+- what matters is stable CPU, RAM, SSD performance, and enough free disk for the current snapshot plus runtime growth
+
+## Why people pick this path
+
+Requirements, in plain English:
+- Linux
+- Docker
+- SSD storage
+- Ethereum mainnet RPC
+- Ethereum mainnet beacon RPC
+- the latest Shape Reth snapshot plus config files
+
+Main advantages:
+- faster bootstrap from snapshot than a cold sync
+- cheaper infra footprint than overprovisioning around old assumptions
+- cleaner Reth-first operator path
+- easier day-2 ops because health is judged by real chain progress, not vibes
 
 ## Start here
 
