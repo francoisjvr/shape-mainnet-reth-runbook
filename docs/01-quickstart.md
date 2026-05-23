@@ -21,6 +21,13 @@ Recommended baseline:
 - 16 GB RAM minimum
 - roughly 1 TB SSD/NVMe with headroom
 
+Validated reference environment:
+- provider: **Contabo**
+- OS: **Ubuntu 24.04 LTS**
+- virtualization: **KVM**
+
+That is a known-good baseline, not a strict provider requirement.
+
 ## Fast path
 
 1. Create the standard directories:

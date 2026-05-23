@@ -24,6 +24,23 @@ A healthy node shows:
 - block hash parity once caught up
 - `eth_syncing=false` only after the node is actually caught up
 
+## Validated baseline
+
+This runbook is provider-neutral, but the practical baseline behind it was validated on a **Contabo VPS**.
+
+Known-good reference shape:
+- provider: **Contabo**
+- OS: **Ubuntu 24.04 LTS**
+- virtualization: **KVM**
+- CPU: **8 vCPU or better preferred**
+- RAM: **16 GB minimum**
+- disk: **roughly 1 TB SSD/NVMe with headroom**
+
+Important note:
+- Contabo is a known-working reference environment for this runbook
+- it is **not** a hard requirement
+- what matters is stable CPU, RAM, SSD performance, and enough free disk for snapshot staging plus runtime growth
+
 ## Start here
 
 1. `docs/01-quickstart.md`
