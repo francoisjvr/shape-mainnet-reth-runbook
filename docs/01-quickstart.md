@@ -39,6 +39,7 @@ That is a known-good baseline, not a strict provider requirement.
    cp examples/.env.example .env
    ```
 3. Stage or transfer the snapshot into `/root/shape-mainnet-op-reth-staging`.
+   - If you still need the current official snapshot source, see **Where to get the current snapshot** in `docs/04-bootstrap-from-snapshot.md`.
 4. Read `docs/04-bootstrap-from-snapshot.md` and promote the datadir into the runtime path.
 5. Start the stack:
    ```bash

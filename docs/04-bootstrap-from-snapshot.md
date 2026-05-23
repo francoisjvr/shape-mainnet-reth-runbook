@@ -9,6 +9,20 @@ Put the archive or transferred datadir into:
 
 If you are using `/root/Upload`, treat it as a transfer cache only.
 
+### Where to get the current snapshot
+
+Do not hardcode a one-off direct archive URL into this repo unless you have revalidated it very recently.
+
+Use the official sources instead:
+- Shape docs: [Run a Node](https://docs.shape.network/technical-details/run-a-node)
+- Shape docs source: [`content/technical-details/run-a-node.mdx`](https://github.com/shape-network/docs/blob/main/content/technical-details/run-a-node.mdx)
+- Current snapshot provider page linked by the docs: [Alchemy Shape snapshots](https://www.alchemy.com/snapshots/shape)
+
+Why this section exists:
+- direct snapshot file URLs can rotate
+- the docs page is the stable operator entry point
+- the docs source is useful if the published page changes and you want to confirm what Shape currently recommends
+
 ## 2. Validate the datadir structure
 
 A real Reth datadir should contain at least:
