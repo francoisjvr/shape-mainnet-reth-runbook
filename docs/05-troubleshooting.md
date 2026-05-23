@@ -49,11 +49,30 @@ Check:
 ## Logs worth checking first
 
 ```bash
-docker logs --tail 100 shape-mainnet-op-reth
+docker logs -f --tail 100 shape-mainnet-op-reth
 ```
 
 ```bash
-docker logs --tail 100 shape-mainnet-op-node-reth
+docker logs -f --tail 100 shape-mainnet-op-node-reth
+```
+
+Both at once:
+
+```bash
+docker logs -f --tail 50 shape-mainnet-op-reth &
+docker logs -f --tail 50 shape-mainnet-op-node-reth
+```
+
+If those names still do not match your machine, discover the exact container names first:
+
+```bash
+docker ps --format '{{.Names}}' | grep 'shape-mainnet'
+```
+
+If you are using Compose from this repo, this also works:
+
+```bash
+docker compose -f examples/docker-compose.yml ps
 ```
 
 ## Escalation rule
